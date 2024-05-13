@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} {{n.title}} - News & Events - Believer Compliance & Sustainability {% endblock %}
+{% load static %}
+{% block content %}
+
+    <main class="flex-shrink-0">
+
+        <section class="container" style="margin-top: 200px;">
+            <a href="{% url 'home' %}">Home</a><i class="fa-solid fa-angles-right p-2"></i><a href="news.html">News &
+                Events</a>
+        </section>
+
+        <!-- Single News Header Image -->
+
+        <section class="container">
+            <img class="single-news-header-img" src="{{n.picture.url}}" alt="">
+            <span><i class="fa-regular fa-calendar pe-2"></i>{{n.timestamp}}</span>
+            <h2 class="single-page-news-title">{{n.title}}</h2>
+             {{n.description}}
+        </section>
+
+
+    </main>
+
+{% endblock %}

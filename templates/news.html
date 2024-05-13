@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %} News & Events - Believer Compliance & Sustainability {% endblock %}
+{% load static %}
+{% block content %}
+
+    <main class="flex-shrink-0">
+
+        <section class="news-page-top-bg">
+            <div>
+                <h1 class="page-first-title animate__animated animate__zoomIn text-white">News & Events</h1>
+            </div>
+        </section>
+
+        <section class="container mt-5 mb-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                {% for n in news %}
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="{{n.picture.url}}" class="card-img-top news-card-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{n.title}}</h5>
+                            <p><i class="fa-regular fa-calendar pe-2"></i>{{n.timestamp}}</p>
+                            <p class="card-text">{{n.get_short_desc}}</p>
+                        </div>
+                        <div class="card-footer p-2 border-0">
+                            <small class="text-muted"><a href="{% url 'news-details' n.id %}">Read more <i
+                                        class="fa-solid fa-arrow-right ps-1"></i></a></small>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            
+            </div>
+        </section>
+
+    </main>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% load static %}
+{% url 'home' as home %}
+{% url 'abouts' as abouts %}
+{% url 'contact' as contact %}
+{% url 'news' as news %}
+{% url 'certification' as certification %}
+{% url 'structural' as service %}
+{% url 'testing' as service %}
+{% url 'others' as service %}
+
+
+
+<section class="fixed-top">
+    <div class="animate__animated animate__fadeInDown top-bar pt-3 pb-3">
+      <div class="row text-white">
+        <div class="col-12 col-md-3 col-lg-3 text-center">
+        </div>
+        <div class="col-12 col-md-3 col-lg-3 text-center">
+          <i class="fa-solid fa-envelope icon"></i>info@believercompliance.com
+        </div>
+        <div class="col-12 col-md-3 col-lg-3 text-center">
+          <i class="fa-solid fa-phone icon"></i>24/7 Customer Support
+        </div>
+        <div class="col-12 col-md-3 col-lg-3 text-center">
+          <i class="fa-solid fa-location-dot icon"></i>Mirpur DOHS, Dhaka, Bangladesh
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm animate__animated animate__fadeInDown">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}"><img class="logo" src="{% static 'asset/images/logo.svg' %}" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item ">
+              <a class="nav-link {% if request.path == home %} active {% endif %} "  href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == abouts %} active {% endif %} " href="{% url 'abouts' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == certification %} active {% endif %} " href="{% url 'certification' %}">Certification</a>
+            </li>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle {% if request.path == service %} active {% endif %}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{% url 'certification' %}">Certifications</a></li>
+                <li><a class="dropdown-item" href="{% url 'testing' %}">Testing and inspections</a></li>
+                <li><a class="dropdown-item" href="{% url 'structural' %}">Structural & Safety
+                    Compliance</a></li>
+                <li><a class="dropdown-item" href="{% url 'others' %}">Others</a></li>
+              </ul>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == news %} active {% endif %} " href="{% url 'news' %}">News & Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == contact %} active {% endif %}" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="">
+              <a class="get-quote-button" href="{% url 'get-quote' %}">Get Quote</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
