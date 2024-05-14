@@ -20,7 +20,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{n.title}}</h5>
                             <p><i class="fa-regular fa-calendar pe-2"></i>{{n.timestamp}}</p>
-                            <p class="card-text">{{n.get_short_desc}}</p>
+                            <p class="card-text">{{n.get_short_desc | safe}}</p>
                         </div>
                         <div class="card-footer p-2 border-0">
                             <small class="text-muted"><a href="{% url 'news-details' n.id %}">Read more <i

@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'News_Page',
     'Get_Quote_Page',
     'Contact_Page',
+    'ckeditor', 
 ]
 
 MIDDLEWARE = [
@@ -94,7 +95,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full', 'uploads/'
+        'height': 300,
+        'width': 800,
+    },
+}
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 

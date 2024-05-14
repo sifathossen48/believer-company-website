@@ -16,7 +16,7 @@
             <img class="single-news-header-img" src="{{n.picture.url}}" alt="">
             <span><i class="fa-regular fa-calendar pe-2"></i>{{n.timestamp}}</span>
             <h2 class="single-page-news-title">{{n.title}}</h2>
-             {{n.description}}
+             {{n.description | safe}}
         </section>
 
 
