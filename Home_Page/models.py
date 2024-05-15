@@ -3,16 +3,16 @@ from django.db import models
 # Create your models here.
 class Why_Selecting_US(models.Model):
     section_name = models.CharField(max_length=50)
-    happy_Clients = models.IntegerField(max_length=5)
+    happy_Clients = models.IntegerField()
     happy_Clients_Title = models.CharField(max_length=40)
     happy_Clients_Desc = models.TextField(max_length=600)
-    personal_Consultants = models.IntegerField(max_length=5)
+    personal_Consultants = models.IntegerField()
     personal_Consultants_Title = models.CharField(max_length=40)
     personal_Consultants_Desc = models.TextField(max_length=600)
-    custom_Services = models.IntegerField(max_length=5)
+    custom_Services = models.IntegerField()
     custom_Services_Title = models.CharField(max_length=40)
     custom_Services_Desc = models.TextField(max_length=600)
-    years_of_Experience = models.IntegerField(max_length=5)
+    years_of_Experience = models.IntegerField()
     years_of_Experience_Title = models.CharField(max_length=40)
     years_of_Experience_Desc = models.TextField(max_length=600)
     def __str__(self):

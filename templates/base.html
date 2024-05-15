@@ -69,6 +69,28 @@
     AOS.init();
   </script>
 
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      smartSpeed: 1000,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
   <!-- Whats App Chat -->
 
   <script>
@@ -107,6 +129,7 @@
     var x = document.getElementsByTagName('script')[0];
     x.parentNode.insertBefore(s, x);
   </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </body>
 
