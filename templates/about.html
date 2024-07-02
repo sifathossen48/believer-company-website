@@ -13,21 +13,21 @@
     </section>
 
     <!-- MD Message -->
-
+    {% for c in c_level %}
     <section class="container bg-light p-5 mt-5">
       <div class="row">
         <div class="col-12 col-md-6 col-lg-6">
-          <img data-aos="fade-up" class="w-100 rounded" src="{% static 'asset/images/home-page/mr-rajon.jpeg' %}" alt="">
+          <img data-aos="fade-up" class="w-100 rounded" src="{{c.image.url}}" alt="">
         </div>
         <div class="col-12 col-md-6 col-lg-6">
-          <h2 data-aos="fade-up" class="mb-5 text-center">CEO Message</h2>
+          <h2 data-aos="fade-up" class="mb-5 text-center">{{c.title}}</h2>
           <p class="ceo-message-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae magni fugiat? Enim consectetur voluptas unde, temporibus dolor mollitia aspernatur voluptatibus deleniti, quidem, eaque asperiores. Amet libero expedita, beatae tempora dignissimos, voluptatum in asperiores natus, vel itaque ducimus nulla at est commodi repellat laboriosam. Adipisci corporis natus cupiditate ipsum reiciendis maxime saepe culpa cumque nobis, labore dolore inventore. Ea repellendus similique beatae impedit, aut vero quidem asperiores esse ad in. Tenetur nam reiciendis dolor magnam deserunt, consequuntur, sed amet ullam maxime molestiae pariatur quae labore eligendi exercitationem porro! Distinctio error, exercitationem ad ipsam, beatae cum totam minima rem eaque nobis aliquam quis incidunt deleniti praesentium reiciendis. Earum doloribus dolores vero aut neque itaque, eius officiis saepe sint suscipit veniam est officia id hic repellendus mollitia. Necessitatibus harum minima, fugit laborum accusantium nihil inventore, totam laboriosam unde sint modi perspiciatis quo molestias nisi. Impedit quo molestiae, laudantium cum sunt eligendi aperiam, culpa voluptatibus itaque nihil iure nam aut recusandae deleniti. Vel, veritatis sapiente ullam quis, excepturi ipsa commodi similique tenetur necessitatibus doloremque, sit assumenda odio. Quidem esse itaque quod odio minima repellendus atque reiciendis id. Culpa dicta ut odit libero quis, maiores numquam earum odio ipsum. Quo non, eius laboriosam similique labore tenetur dolore sequi quas deserunt eaque? Facere nihil quia nesciunt nemo, fugit deserunt et dolorem officia saepe architecto veritatis obcaecati totam, vero vel tempore necessitatibus fuga vitae adipisci aut, laudantium eaque ipsum! Reiciendis eveniet ea expedita doloremque dolore perspiciatis repellat, alias distinctio excepturi obcaecati atque nisi adipisci blanditiis quas commodi nobis beatae magni corrupti quibusdam quod. Ad voluptatum sit impedit laboriosam. Quae natus sunt qui modi blanditiis ab, minus aliquid, sit, veritatis odio beatae iure! Nulla molestiae distinctio saepe excepturi necessitatibus, officia quo corrupti repudiandae eos accusamus consectetur inventore. Sed quia nulla nisi at accusantium temporibus amet. Consectetur, commodi?
+          {{c.message}}
           </p>
         </div>
       </div>
     </section>
-
+    {% endfor %}
     <!-- What we Do -->
 
     <section>
@@ -38,21 +38,8 @@
           </div>
           <div class="col-12 col-md-6 col-lg-6">
             <h2 data-aos="fade-up" class="mb-5">What we do?</h2>
-            <p data-aos="fade-up"><b>BELIEVER</b> Compliance & Sustainability is the world leading organization
-              engaged with <b>audit,
-                inspection, testing, certification, training,</b> and <b>research & development</b>. Established in 2020
-              with a group of experienced compliance & sustainability professionals, it aims to transform factories,
-              manufacturing units, trading houses as well as corporate offices from non-compliant to compliant status by
-              all of its services. And by achieving these services, they can meet the requirements of local labor law
-              and various buyers’ requirements and internationally acclaimed safety standards. BELIEVER helps improve
-              the value of the organizational corporate social responsibilities towards man, machines, technology as
-              well as environment to make a safer, better and a sustainable world.
+            <p data-aos="fade-up">{{whyUs.we_Do | safe}}
             </p>
-            <P data-aos="fade-up">
-              BELIEVER offers its services for both the public and private sectors and for all sorts of industries such
-              as: Manufacturing, Construction & Engineering, IT, Service-oriented industries, Ed-Tech, Healthcare, Agro,
-              Fin-Tech, Logistic, Trading etc.
-            </P>
           </div>
         </div>
       </div>

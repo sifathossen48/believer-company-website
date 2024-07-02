@@ -10,5 +10,5 @@ urlpatterns = [
     path('get_quote/',include('Get_Quote_Page.urls')),
     path('contact/',include('Contact_Page.urls'))
    
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
